@@ -37,6 +37,7 @@ class _ChatPageState extends State<ChatPage> {
   final recorder = FlutterSoundRecorder();
   final player = AudioPlayer();
   bool isRecording = false;
+  int recorderIndex = 0;
 
   initiliazeRecording() async {
     final status = await Permission.microphone.request();
@@ -111,7 +112,6 @@ class _ChatPageState extends State<ChatPage> {
                                       me: true,
                                       onPlay: () async {
                                         await player.setUrl(message.audioPath!);
-                                        player.play();
                                       },
                                       meBgColor: Colors.blue.shade200,
                                     )
@@ -159,7 +159,8 @@ class _ChatPageState extends State<ChatPage> {
                           setState(() {
                             isRecording = true;
                           });
-                          await recorder.startRecorder(toFile: 'voice');
+                          await recorder.startRecorder(
+                              toFile: 'voice${recorderIndex++}');
                         },
                         onLongPressEnd: (details) async {
                           final audioPath = await recorder.stopRecorder();

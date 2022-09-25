@@ -1,4 +1,8 @@
 PODS:
+  - agora_rtc_engine (3.4.6):
+    - AgoraRtcEngine_iOS (= 3.4.6)
+    - Flutter
+  - AgoraRtcEngine_iOS (3.4.6)
   - audio_session (0.0.1):
     - Flutter
   - audioplayers (0.0.1):
@@ -18,6 +22,7 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - agora_rtc_engine (from `.symlinks/plugins/agora_rtc_engine/ios`)
   - audio_session (from `.symlinks/plugins/audio_session/ios`)
   - audioplayers (from `.symlinks/plugins/audioplayers/ios`)
   - Flutter (from `Flutter`)
@@ -29,9 +34,12 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AgoraRtcEngine_iOS
     - flutter_sound_core
 
 EXTERNAL SOURCES:
+  agora_rtc_engine:
+    :path: ".symlinks/plugins/agora_rtc_engine/ios"
   audio_session:
     :path: ".symlinks/plugins/audio_session/ios"
   audioplayers:
@@ -50,6 +58,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
 
 SPEC CHECKSUMS:
+  agora_rtc_engine: ac3bd29e98aa98043b55d8fa92289630ffd93e5e
+  AgoraRtcEngine_iOS: 8aa4a8e46bd81963607857b1d46703b93e4de156
   audio_session: 4f3e461722055d21515cf3261b64c973c062f345
   audioplayers: 455322b54050b30ea4b1af7cd9e9d105f74efa8c
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
